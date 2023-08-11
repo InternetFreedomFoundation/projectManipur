@@ -632,12 +632,24 @@ html {
   margin-top: -3.5rem;
 }
 
+.mb-16 {
+  margin-bottom: 4rem;
+}
+
 .mb-24 {
   margin-bottom: 6rem;
 }
 
+.mb-8 {
+  margin-bottom: 2rem;
+}
+
 .mb-\[auto\] {
   margin-bottom: auto;
+}
+
+.mt-16 {
+  margin-top: 4rem;
 }
 
 .mt-48 {
@@ -646,6 +658,10 @@ html {
 
 .mt-56 {
   margin-top: 14rem;
+}
+
+.mt-8 {
+  margin-top: 2rem;
 }
 
 .inline-block {
@@ -806,10 +822,6 @@ html {
   padding: 0.25rem;
 }
 
-.p-4 {
-  padding: 1rem;
-}
-
 .p-\[10px\] {
   padding: 10px;
 }
@@ -818,12 +830,28 @@ html {
   padding-bottom: 0.5rem;
 }
 
+.pb-8 {
+  padding-bottom: 2rem;
+}
+
 .pt-2 {
   padding-top: 0.5rem;
 }
 
 .pt-4 {
   padding-top: 1rem;
+}
+
+.pt-8 {
+  padding-top: 2rem;
+}
+
+.pb-0 {
+  padding-bottom: 0px;
+}
+
+.pt-0 {
+  padding-top: 0px;
 }
 
 .text-justify {
@@ -836,6 +864,10 @@ html {
 
 .text-\[44px\] {
   font-size: 44px;
+}
+
+.font-medium {
+  font-weight: 500;
 }
 
 .font-semibold {
@@ -870,6 +902,10 @@ html {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+.filter {
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
 p {
   line-height: 1.35;
 }
@@ -901,11 +937,19 @@ p {
   background-color: #221210;
 }
 
+.red-bg {
+  background-color: #E8183D;
+}
+
 .normal-text {
   font-size: 20px;
   line-height: 27px;
   padding-top: 1rem;
   padding-bottom: 1rem;
+}
+
+.strong-text {
+  font-size: 32px;
 }
 
 .heading-text {
@@ -930,8 +974,36 @@ p {
   border-top: 2px solid white;
 }
 
+.big-white-box {
+  background-color: #F1F6FC;
+  width: 1116px;
+  top: 255px;
+  padding: 40px 40px 48px 40px;
+  border-radius: 0px 40px 40px 40px;
+  gap: 24px;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.big-quote {
+  font-size: 32px;
+  font-style: italic;
+  font-weight: 300;
+  margin-bottom: 0.5rem;
+}
+
+.quote-author {
+  color: #FF103B;
+}
+
 a {
   text-decoration: underline;
+}
+
+@media (max-width: 1440px) {
+  .big-white-box {
+    width: 920px;
+  }
 }
 
 @media (max-width: 1024px) {
@@ -941,6 +1013,10 @@ a {
 
   .heading-text {
     font-size: 45px;
+  }
+
+  .big-white-box {
+    width: 384px;
   }
 }
 
