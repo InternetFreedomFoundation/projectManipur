@@ -3,20 +3,20 @@
 @tailwind utilities;
 
 p {
-  line-height: 1.35;
+    line-height: 1.35;
 }
 
 /* Hide scrollbar for Chrome, Safari and Opera */
 .no-scrollbar::-webkit-scrollbar {
-  display: none;
+    display: none;
 }
 
 /* Hide scrollbar for IE, Edge and Firefox */
 .no-scrollbar {
-  -ms-overflow-style: none;
-  /* IE and Edge */
-  scrollbar-width: none;
-  /* Firefox */
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
 }
 
 .paper-bg {
@@ -79,6 +79,17 @@ p {
     margin-bottom: 2rem;
 }
 
+.big-black-box {
+    background-color: #0C0C0C;
+    width: 1116px;
+    top: 255px;
+    padding: 40px 40px 48px 40px;
+    border-radius: 0px 40px 40px 40px;
+    gap: 24px;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
 .big-quote {
     font-size: 32px;
     font-style: italic;
@@ -96,7 +107,11 @@ a {
 
 @media (max-width: 1440px) {
     .big-white-box {
-        width: 920px; 
+        width: 920px;
+    }
+
+    .big-black-box {
+        width: 920px;
     }
 }
 
@@ -112,14 +127,18 @@ a {
     .big-white-box {
         width: 384px;
     }
+
+    .big-black-box {
+        width: 384px;
+    }
 }
 
 @layer base {
-  body {
-    @apply antialiased min-h-[100%] m-0 p-0 overflow-x-hidden no-scrollbar overflow-y-auto
-  }
+    body {
+        @apply antialiased min-h-[100%] m-0 p-0 overflow-x-hidden no-scrollbar overflow-y-auto
+    }
 
-  html {
-    @apply scroll-smooth min-h-[100%] overflow-x-hidden overflow-y-auto
-  }
+    html {
+        @apply scroll-smooth min-h-[100%] overflow-x-hidden overflow-y-auto
+    }
 }
