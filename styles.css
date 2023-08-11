@@ -2,10 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-p {
-  line-height: 1.35;
-}
-
 /* Hide scrollbar for Chrome, Safari and Opera */
 .no-scrollbar::-webkit-scrollbar {
   display: none;
@@ -17,6 +13,10 @@ p {
   /* IE and Edge */
   scrollbar-width: none;
   /* Firefox */
+}
+
+p {
+  line-height: 1.35;
 }
 
 .paper-bg {
@@ -90,6 +90,64 @@ p {
     color: #FF103B;
 }
 
+.snappy-scroll-backdrop {
+    height: 100vh;
+    width: 100vw;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+}
+
+.snappy-scroll-container {
+    display: flex;
+    width: 920px;
+    min-width: 920px;
+    scroll-snap-type: x mandatory;
+    overflow-x: scroll;
+    scrollbar-width: none;
+    scrollbar-height: none;
+    background-color: white;
+}
+
+.snappy-scroll-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    min-width: 920px;
+    scroll-snap-align: start;
+}
+
+.snappy-scroll-navigation {
+    margin-top: 2rem;
+}
+
+.snappy-scroll-nav-button {
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    background-color: #FF103B;
+    opacity: 0.4;
+}
+
+.snappy-scroll-nav-button.active {
+    background-color: #FF103B;
+    opacity: 1;
+}
+
+.full-image {
+    width: 100%;
+    height: auto;
+}
+
 a {
     text-decoration: underline;
 }
@@ -101,8 +159,9 @@ a {
 }
 
 @media (max-width: 1024px) {
-    .container {
+    .container, .snappy-scroll-section, .snappy-scroll-container {
         width: 384px;
+        min-width: 384px;
     }
 
     .heading-text {

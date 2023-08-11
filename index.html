@@ -16,7 +16,7 @@
 <body class="no-scrollbar">
   <!-- Hero section -->
   <div
-    class="h-full w-full bg-opacity-50 bg-local bg-cover bg-no-repeat min-w-screen min-h-[832px] bg-black flex items-center justify-center relative"
+    class="snap-section h-full w-full bg-opacity-50 bg-local bg-cover bg-no-repeat min-w-screen min-h-[832px] bg-black flex items-center justify-center relative"
     style="background-image: url('./public/images/Manipur_hero.png'); padding-top: 2rem; padding-bottom: 20rem;">
     <div
       class="w-full h-full min-w-screen min-h-[832px] top-0 left-0 right-0 absolute z-[99] bg-gradient-to-b from-black/5 to to-black">
@@ -49,7 +49,7 @@
   </div>
 
   <!-- section 2 -->
-  <div class="paper-bg" style="margin-top: -20rem; padding-top: 20rem; padding-bottom: 20rem;">
+  <div class="snap-section paper-bg" style="margin-top: -20rem; padding-top: 20rem; padding-bottom: 20rem;">
     <div class="h-full w-full flex flex-col justify-between items-center gap-2 lg:gap-4 sm:gap-2 mb-[auto]">
       <!-- Top bg paper -->
       <!-- <div></div>-->
@@ -81,7 +81,7 @@
     </div>
 
     <!-- Section 3 -->
-    <div class="h-full w-full flex flex-col justify-evenly items-center gap-2 lg:gap-4 sm:gap-2"
+    <div class="snap-section h-full w-full flex flex-col justify-evenly items-center gap-2 lg:gap-4 sm:gap-2"
       style="margin-top: -20rem; padding-top: 20rem;">
       <div
         class="inline-flex justify-self-start space-y-4 lg:space-y-6 sm:space-y-4 space-x-[auto] container red-top-border pt-4 lg:mt-4 sm:mt-2 text-justify">
@@ -129,13 +129,13 @@
         </p>
       </div>
       <div class="container pt-2">
-        <img src="./public/images/percent_desktop.png" alt="percent desktop" class="mt-56 lg:mt-[auto] sm:mt-56">
+        <img src="./public/images/percent_desktop.png" alt="percent desktop">
       </div>
     </div>
   </div>
 
   <!-- Section 4 -->
-  <div class="h-full w-full flex justify-center brown-bg min-h-screen"
+  <div class="snap-section h-full w-full flex flex-col justify-center items-center brown-bg min-h-screen"
     style="margin-top: -20rem; padding-top: 20rem; padding-bottom: 10rem;">
     <div class="container brown-bg white-top-border pt-4">
       <p class="heading-text pb-2">Cut, Copy, Paste
@@ -174,7 +174,41 @@
         continues to be shut down—the ongoing internet shutdown in Manipur is illegal.
 
       </p>
+    </div>
 
+    <div class="snappy-scroll-backdrop">
+      <div class="snappy-scroll-container">
+          <div id="snap-cutpaste-0" class="snappy-scroll-section">
+              <img src="./public/images/6.png" class="full-image" />
+          </div>
+          <div id="snap-cutpaste-1" class="snappy-scroll-section">
+              <img src="./public/images/7.png" class="full-image" />
+          </div>
+          <div id="snap-cutpaste-2" class="snappy-scroll-section">
+              <img src="./public/images/8.png" class="full-image" />
+          </div>
+          <div id="snap-cutpaste-3" class="snappy-scroll-section">
+              <img src="./public/images/9.png" class="full-image" />
+          </div>
+          <div id="snap-cutpaste-4" class="snappy-scroll-section">
+              <img src="./public/images/10.png" class="full-image" />
+          </div>
+      </div>
+      <div class="snappy-scroll-navigation">
+          <button id="snap-cutpaste-0-btn" class="snappy-scroll-nav-button active">
+          </button>
+          <button id="snap-cutpaste-1-btn" class="snappy-scroll-nav-button">
+          </button>
+          <button  id="snap-cutpaste-2-btn" class="snappy-scroll-nav-button">
+          </button>
+          <button id="snap-cutpaste-3-btn" class="snappy-scroll-nav-button">
+          </button>
+          <button id="snap-cutpaste-4-btn" class="snappy-scroll-nav-button">
+          </button>
+      </div>
+    </div>
+
+    <div class="brown-bg container">
       <p class="normal-text text-white">
         An internet shutdown has real and profound consequences for the people it impacts. A prolonged, seemingly
         indefinite shutdown leaves a devastating, long-term impact on communities, economies, and societies. Despite the
@@ -198,7 +232,7 @@
   </div>
 
   <!-- Section 5 -->
-  <div class="paper-bg" style="margin-top: -10rem; padding-top: 20rem; padding-bottom: 20rem; background-size: cover;">
+  <div class="snap-section paper-bg" style="margin-top: -10rem; padding-top: 20rem; padding-bottom: 20rem; background-size: cover;">
     <div class="h-full w-full flex flex-col justify-center items-center">
       <div class="container red-top-border pt-8">
         <p class="heading-text pb-8">Do Internet
@@ -282,7 +316,7 @@
 
 
   <!-- Section 6 -->
-  <div class="h-full w-full flex flex-col items-center brown-bg min-h-screen"
+  <div class="snap-section h-full w-full flex flex-col items-center brown-bg min-h-screen"
     style="margin-top: -10rem; padding-top: 20rem; padding-bottom: 10rem;">
     <div class="container brown-bg white-top-border pt-4">
       <p class="heading-text pb-2">Impact</p>
@@ -461,6 +495,8 @@
     </div>
 
   </div>
+
+
 
   <script src=" script.js">
   </script>
