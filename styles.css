@@ -15,6 +15,34 @@
   /* Firefox */
 }
 
+.paper-bg {
+    background-image: url('./public/images/paper-bg.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.normal-text {
+    font-size: 20px;
+    line-height: 27px;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.container {
+    width: 779px;
+}
+
+.red-top-border {
+    border-top: 1.5px solid #FF103B;
+}
+
+@media (max-width: 1024px) {
+    .container {
+        width: 384px;
+    }
+}
+
 @layer base {
   body {
     @apply antialiased min-h-[100%] m-0 p-0 overflow-x-hidden no-scrollbar overflow-y-auto
