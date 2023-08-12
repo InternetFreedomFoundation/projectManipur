@@ -16,7 +16,7 @@
 }
 
 p {
-  line-height: 1.35;
+    line-height: 1.35;
 }
 
 .paper-bg {
@@ -152,7 +152,9 @@ p {
     margin-bottom: 2rem;
 }
 
-.big-white-box .normal-text, .big-red-box .normal-text, .big-black-box .normal-text {
+.big-white-box .normal-text,
+.big-red-box .normal-text,
+.big-black-box .normal-text {
     padding-bottom: 0;
 }
 
@@ -234,7 +236,10 @@ a {
 }
 
 @media (max-width: 1440px) {
-    .big-white-box, .big-black-box, .big-red-box {
+
+    .big-white-box,
+    .big-black-box,
+    .big-red-box {
         width: 920px;
     }
 }
@@ -245,7 +250,9 @@ a {
         padding-bottom: 12rem;
     }
 
-    .container, .snappy-scroll-section, .snappy-scroll-container {
+    .container,
+    .snappy-scroll-section,
+    .snappy-scroll-container {
         width: 384px;
         min-width: 384px;
     }
@@ -254,7 +261,9 @@ a {
         font-size: 45px;
     }
 
-    .big-white-box, .big-black-box, .big-red-box {
+    .big-white-box,
+    .big-black-box,
+    .big-red-box {
         width: 384px;
     }
 }
