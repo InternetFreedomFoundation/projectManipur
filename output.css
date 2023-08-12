@@ -647,8 +647,8 @@ html {
   margin-top: -3.5rem;
 }
 
-.mb-24 {
-  margin-bottom: 6rem;
+.mb-16 {
+  margin-bottom: 4rem;
 }
 
 .mb-8 {
@@ -671,16 +671,8 @@ html {
   margin-top: 6rem;
 }
 
-.mt-48 {
-  margin-top: 12rem;
-}
-
 .mt-8 {
   margin-top: 2rem;
-}
-
-.mt-\[7\.8rem\] {
-  margin-top: 7.8rem;
 }
 
 .inline-block {
@@ -741,6 +733,10 @@ html {
 
 .max-w-sm {
   max-width: 24rem;
+}
+
+.transform {
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .flex-col {
@@ -1033,11 +1029,62 @@ p {
 }
 
 .paper-bg {
-  background-image: url('./public/images/paper-bg.svg');
+  /* background-image: url('./public/images/paper-bg.svg'); */
+  background-color: #F1F6FC;
   background-repeat: no-repeat;
   background-size: cover;
-  position: relative;
+  margin-top: -10rem;
+  margin-bottom: -10rem;
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+  /* position: relative;
+    z-index: 100; */
+}
+
+/* .paper-bg::before {
+    content: "";
+    background-image: url('./public/images/paper-up.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.paper-bg::after {
+    content: "";
+    background-image: url('./public/images/paper-down.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+} */
+
+.paper-up {
+  content: url('./public/images/paper-up.png');
+  -o-object-fit: contain;
+     object-fit: contain;
+  margin-top: -200px;
+  width: 100vw;
+  min-height: 400px;
   z-index: 100;
+  position: relative;
+}
+
+.paper-down {
+  content: url('./public/images/paper-down.png');
+  -o-object-fit: contain;
+     object-fit: contain;
+  margin-bottom: -200px;
+  width: 100vw;
+  min-height: 400px;
+  z-index: 100;
+  position: relative;
 }
 
 .brown-bg {
@@ -1094,6 +1141,7 @@ p {
 
 .big-black-box {
   background-color: #0C0C0C;
+  color: white;
   width: 1116px;
   top: 255px;
   padding: 40px 40px 48px 40px;
@@ -1101,6 +1149,22 @@ p {
   gap: 24px;
   margin-top: 2rem;
   margin-bottom: 2rem;
+}
+
+.big-red-box {
+  background-color: #FF103B;
+  color: white;
+  width: 1116px;
+  top: 255px;
+  padding: 40px 40px 48px 40px;
+  border-radius: 0px 40px 40px 40px;
+  gap: 24px;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.big-white-box .normal-text, .big-red-box .normal-text, .big-black-box .normal-text {
+  padding-bottom: 0;
 }
 
 .big-quote {
@@ -1112,6 +1176,10 @@ p {
 
 .quote-author {
   color: #FF103B;
+}
+
+.big-red-box .quote-author {
+  color: #0C0C0C;
 }
 
 .snappy-scroll-backdrop {
@@ -1177,16 +1245,17 @@ a {
 }
 
 @media (max-width: 1440px) {
-  .big-white-box {
-    width: 920px;
-  }
-
-  .big-black-box {
+  .big-white-box, .big-black-box, .big-red-box {
     width: 920px;
   }
 }
 
 @media (max-width: 1024px) {
+  .paper-bg {
+    padding-top: 12rem;
+    padding-bottom: 12rem;
+  }
+
   .container, .snappy-scroll-section, .snappy-scroll-container {
     width: 384px;
     min-width: 384px;
@@ -1196,11 +1265,7 @@ a {
     font-size: 45px;
   }
 
-  .big-white-box {
-    width: 384px;
-  }
-
-  .big-black-box {
+  .big-white-box, .big-black-box, .big-red-box {
     width: 384px;
   }
 }
@@ -1209,10 +1274,6 @@ a {
   .sm\:mx-\[25\%\] {
     margin-left: 25%;
     margin-right: 25%;
-  }
-
-  .sm\:mb-24 {
-    margin-bottom: 6rem;
   }
 
   .sm\:mt-16 {
@@ -1259,10 +1320,6 @@ a {
     margin-bottom: calc(1rem * var(--tw-space-y-reverse));
   }
 
-  .sm\:p-1 {
-    padding: 0.25rem;
-  }
-
   .sm\:text-left {
     text-align: left;
   }
@@ -1276,10 +1333,6 @@ a {
   .lg\:mx-auto {
     margin-left: auto;
     margin-right: auto;
-  }
-
-  .lg\:mb-28 {
-    margin-bottom: 7rem;
   }
 
   .lg\:mt-0 {
@@ -1324,10 +1377,6 @@ a {
     --tw-space-y-reverse: 0;
     margin-top: calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));
     margin-bottom: calc(1.5rem * var(--tw-space-y-reverse));
-  }
-
-  .lg\:p-0 {
-    padding: 0px;
   }
 
   .lg\:text-center {

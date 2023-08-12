@@ -20,11 +20,60 @@ p {
 }
 
 .paper-bg {
-    background-image: url('./public/images/paper-bg.svg');
+    /* background-image: url('./public/images/paper-bg.svg'); */
+    background-color: #F1F6FC;
     background-repeat: no-repeat;
     background-size: cover;
-    position: relative;
+    margin-top: -10rem;
+    margin-bottom: -10rem;
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+    /* position: relative;
+    z-index: 100; */
+}
+
+/* .paper-bg::before {
+    content: "";
+    background-image: url('./public/images/paper-up.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.paper-bg::after {
+    content: "";
+    background-image: url('./public/images/paper-down.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+} */
+
+.paper-up {
+    content: url('./public/images/paper-up.png');
+    object-fit: contain;
+    margin-top: -200px;
+    width: 100vw;
+    min-height: 400px;
     z-index: 100;
+    position: relative;
+}
+
+.paper-down {
+    content: url('./public/images/paper-down.png');
+    object-fit: contain;
+    margin-bottom: -200px;
+    width: 100vw;
+    min-height: 400px;
+    z-index: 100;
+    position: relative;
 }
 
 .brown-bg {
@@ -81,6 +130,7 @@ p {
 
 .big-black-box {
     background-color: #0C0C0C;
+    color: white;
     width: 1116px;
     top: 255px;
     padding: 40px 40px 48px 40px;
@@ -88,6 +138,22 @@ p {
     gap: 24px;
     margin-top: 2rem;
     margin-bottom: 2rem;
+}
+
+.big-red-box {
+    background-color: #FF103B;
+    color: white;
+    width: 1116px;
+    top: 255px;
+    padding: 40px 40px 48px 40px;
+    border-radius: 0px 40px 40px 40px;
+    gap: 24px;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.big-white-box .normal-text, .big-red-box .normal-text, .big-black-box .normal-text {
+    padding-bottom: 0;
 }
 
 .big-quote {
@@ -99,6 +165,10 @@ p {
 
 .quote-author {
     color: #FF103B;
+}
+
+.big-red-box .quote-author {
+    color: #0C0C0C;
 }
 
 .snappy-scroll-backdrop {
@@ -164,16 +234,17 @@ a {
 }
 
 @media (max-width: 1440px) {
-    .big-white-box {
-        width: 920px;
-    }
-
-    .big-black-box {
+    .big-white-box, .big-black-box, .big-red-box {
         width: 920px;
     }
 }
 
 @media (max-width: 1024px) {
+    .paper-bg {
+        padding-top: 12rem;
+        padding-bottom: 12rem;
+    }
+
     .container, .snappy-scroll-section, .snappy-scroll-container {
         width: 384px;
         min-width: 384px;
@@ -183,11 +254,7 @@ a {
         font-size: 45px;
     }
 
-    .big-white-box {
-        width: 384px;
-    }
-
-    .big-black-box {
+    .big-white-box, .big-black-box, .big-red-box {
         width: 384px;
     }
 }
